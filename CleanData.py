@@ -4,6 +4,14 @@ from bs4 import BeautifulSoup
 import re
 import string
 
+
+
+url="http://www.amac.org.cn/xxgs/jlcf/390997.shtml"
+content=urlopen(url)
+soup=BeautifulSoup(content) 
+print soup
+
+'''
 def cleanInput(input):
 	input = re.sub('\n+'," ",input)
 	input = re.sub('\[[0-9]*\]'," ",input)
@@ -30,4 +38,4 @@ bsObj = BeautifulSoup(html,"html.parser")
 content = bsObj.find("div",{"id":"mw-content-text"}).get_text()
 ngrams = ngrams(content,2)
 print(ngrams)
-print("2-grams count is:" + str(len(ngrams)))
+print("2-grams count is:" + str(len(ngrams)))'''
